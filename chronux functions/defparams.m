@@ -6,12 +6,13 @@
 
 function [params]=defparams(tapers,Fs,fpass,pad,trialave,err)
 
-if ~exist('tapers'); tapers=[3 5]; end
-if ~exist('Fs'); Fs=2000; end
-if ~exist('fpass'); fpass=[0 Fs/2]; end
-if ~exist('pad'); pad=0; end
-if ~exist('trialave'); trialave=0; end
-if ~exist('err'); err=0; end
+if ~exist('tapers','var'); tapers=[3 5]; end
+if ~exist('Fs','var'); Fs=2000; end
+if ~exist('fpass','var'); fpass=[0 Fs/2]; end
+if ~exist('pad','var'); pad=0; end
+if ~isempty('pad'); pad=0; end
+if ~exist('trialave','var'); trialave=0; end
+if ~exist('err','var'); err=0; end
 
 params.tapers=tapers;
 params.Fs=Fs;
